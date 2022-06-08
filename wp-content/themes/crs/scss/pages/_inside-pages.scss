@@ -1,0 +1,343 @@
+.page-hero {
+    padding: 100px 0;
+    h1 { margin-bottom: 15px; }
+    h3 { margin-top: 15px; }
+
+    &.product-hero {
+        h1 { font-size: 115px; margin-bottom: 25px; }
+    }
+
+    .btn-area { padding-top: 40px; }
+}
+
+.content-rows {
+    padding: 80px 0 0 0;
+
+    .row { padding-bottom: 80px; }
+
+    .content-area {
+        display: flex;
+        align-items: center;
+
+        .btn-area {
+            padding-top: 25px;
+        }
+    }
+}
+
+.page-intro {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.crane-services-image { padding-bottom: 80px; }
+
+.crane-services {
+    padding: 80px 0 0 0;
+
+    &.new { background: $yellow; }
+    &.aftermarket {
+        background: $blue;
+
+        h2, h3, p { color: #ffffff; }
+        .btn {
+            background: #ffffff;
+            color: $blue;
+
+            &:hover { background: $yellow; }
+        }
+    }
+
+    .row { padding-bottom: 80px; }
+
+    .content-area {
+        display: flex;
+        align-items: center;
+
+        .btn-area {
+            padding-top: 25px;
+        }
+    }
+
+    .srv-intro, .srv-action {
+        text-align: center;
+    }
+}
+
+.product-list {
+    padding: 80px 0;
+    background: $yellow;
+    border-top: 1px solid $bordercolor;
+    border-bottom: 1px solid $bordercolor;
+
+    .prod-intro {
+        text-align: center;
+        padding-bottom: 80px;
+    }
+
+    .prod-item-wrap {
+        padding-left: 30px;
+        padding-right: 30px;
+        margin: 30px 0;
+    }
+
+    .prod-item {
+        background: $blue;
+        width: 100%;
+        height: 100%;
+
+        a { 
+            text-decoration: none; 
+            display: block; 
+            padding: 60px 40px; 
+        }
+
+        .content {
+            text-align: center;
+            padding-top: 30px;
+
+            p { color: #ffffff; font-size: 13px; line-height: 1.3; }
+            h3 { color: #ffffff; font-size: 18px; margin: 0 0 8px 0; }
+        }
+        
+        .image {
+            padding: 0 10%;
+            width: 100%;
+            
+            .inside {
+                background-size: cover;
+                background-position: center center;
+                width: 100%;
+                height: 0;
+                padding-bottom: 100%;
+            }
+        }
+    }
+}
+
+.did-you-know {
+    background: $blue;
+    padding: 80px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.3;
+    color: #ffffff;
+    margin-top: 80px;
+}
+
+.text-button-cta {
+    padding: 80px 0;
+    text-align: center;
+
+    &.yellow { background: $yellow; }
+
+    .btn-area {
+        padding-top: 25px;
+    }
+}
+
+.prod-gallery-full {
+    padding-bottom: 80px;
+
+    .gallery-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .gal-img {
+            flex: 0 0 auto;
+            width: 20%;
+            padding: 15px;
+
+            a { 
+                display: block;
+                position: relative;
+
+                .image {
+                    width: 100%;
+                    height: 0;
+                    padding-bottom: 115%;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center center;                    
+                }
+
+                .caption {
+                    background: $blue;
+                    color: #ffffff;
+                    padding: 10px;
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    left: 0;
+                    line-height: 1.2;
+                    font-size: 10px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    &.three {
+        .gallery-wrap .gal-img { 
+            width: 33.33333%; 
+            padding: 30px;
+
+            a .image { padding-bottom: 100%; }
+        }
+    }
+}
+
+.prod-gallery-half {
+    .gallery-wrap {
+        display: flex;
+        flex-wrap: wrap;
+
+        .gal-img {
+            flex: 0 0 auto;
+            width: 50%;
+            padding: 15px;
+
+            a { 
+                display: block;
+                position: relative;
+
+                .image {
+                    width: 100%;
+                    height: 0;
+                    padding-bottom: 100%;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center center;                    
+                }
+
+                .caption {
+                    background: $blue;
+                    color: #ffffff;
+                    padding: 10px;
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    left: 0;
+                    line-height: 1.2;
+                    font-size: 10px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.gal-img-single {
+    a { 
+        display: block;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .caption {
+            background: $blue;
+            color: #ffffff;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            left: 0;
+            line-height: 1.2;
+            font-size: 10px;
+            text-align: center;
+        }
+    }
+}
+
+.understanding-101 {
+    padding: 80px 0;
+    background: $yellow;
+    border-top: 1px solid $bordercolor;
+    border-bottom: 1px solid $bordercolor;
+
+    h3 { margin: 20px 0 10px 0; }
+}
+
+.products-101 {
+    padding: 80px 0;
+
+    .needs-101-item {
+        background: $yellow;
+        padding: 20px;
+        border: 1px solid $bordercolor;
+        display: flex;
+        margin: 15px 0;
+
+        .prod-info {
+            flex: 0 0 auto;
+            width: 35%;
+
+            a.img-wrap {
+                display: block;
+                width: 100%;
+                margin-bottom: 15px;
+
+                div {
+                    width: 100%;
+                    height: 0;
+                    padding-bottom: 100%;
+                    background-size: cover;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            .btn {
+                display: block;
+                text-align: center;
+                padding: 10px 20px;
+            }
+        }
+
+        .prod-content {
+            flex: 0 0 auto;
+            width: 65%;
+            padding-left: 20px;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.parts-equipment {
+    padding: 80px 0;
+    background: $yellow;
+    border-top: 1px solid $bordercolor;
+    border-bottom: 1px solid $bordercolor;
+
+    .pe-intro {
+        text-align: center;
+        padding-bottom: 60px;
+    }
+
+    .equip-supply-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+
+        li { 
+            flex: 0 0 auto;
+            width: 25%;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                max-width: 175px;
+            }
+        }
+    }
+}
