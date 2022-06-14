@@ -4,6 +4,14 @@
 	
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>	
 
+    <div id="homeSplash" class="home-intro">
+        <div class="video-wrap" @click="skipIntro()">
+            <video id="herovid" playsinline autoplay muted preload="auto">
+                <source src="<?php print VIDEOS; ?>/intro-video.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
     <?php 
     $heroFields = get_field('page_hero'); 
     if($heroFields)

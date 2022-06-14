@@ -1,14 +1,88 @@
 /* --------------------------------------------------------------------------
 Media Queries.
 -------------------------------------------------------------------------- */
-@media (max-width: 1250px) {
-
+@media (max-width: 1280px) {
+    h1, .page-hero.product-hero h1 { font-size: 90px; }
+    #popup-menu .navbar-nav .menu-item > .nav-link { font-size: 55px; }
 }
 
 @media (max-width: 1024px) {
-   
+    footer .footer-nav { columns: 1; }
+    .page-hero h3 { margin-top: 15px; line-height: 1.1; }
+
+    .crane-services {
+        h2 { font-size: 36px; line-height: 1.2; }
+    }
+
+    .prod-gallery-half .gallery-wrap .gal-img { width: 100%; }
+    .prod-gallery-full .gallery-wrap .gal-img { width: 33.333333%; }
+
+    .page-hero.product-hero h1 { font-size: 70px; }
+    .page-hero.product-hero h3 { font-size: 40px; }
+    .prod-gallery-full.three .gallery-wrap .gal-img { padding: 15px; }
+
+    .parts-equipment .equip-supply-list li {
+        width: 50%; 
+    }
+
+    .single-content .single-info h1 { font-size: 60px; }
 }
 
 @media (max-width: 480px) {
+    h1, .single-content .single-info h1 { font-size: 48px; }
+
+    .page-hero h3 { margin-top: 15px; font-size: 40px; line-height: 1.1; }
+
+    header {
+        padding: 30px 0 0 0;
+
+        .top-btn-wrap { display: none; }
+    }
+
+    footer {
+        text-align: center;
+
+        .footer-nav { padding: 40px 0; margin: 0; }
+    }
+
+    .btn { display: block; font-size: 14px; padding: 15px 30px; }
+
+    #popup-menu {
+        .navbar-nav .menu-item > .nav-link { font-size: 35px; }
+
+        .mobile-login { display: block; padding-top: 45px; }
+    }
+
+    .navbtn.inside-menu { top: 20px; right: 0px; }
+
+    .yellow-cta h2, h2 { font-size: 40px; line-height: 1.2; }
+
+    .content-rows, .customer-login-home, .crane-services {
+        .content-area .inner { padding-top: 30px; }
+    }
+
+    .crane-services {
+        h2 { font-size: 34px; }
+    }
+
+    .product-list .prod-item a { padding: 30px 15px; }
+    .product-list .prod-item-wrap { padding-left: 15px; padding-right: 15px; margin: 15px 0; }
+
+    .did-you-know { padding: 40px; font-size: 22px; }
+
+    .page-hero.product-hero h1 { font-size: 48px; }
+    .page-hero.product-hero h3 { font-size: 28px; }
+
+    .prod-gallery-full .gallery-wrap .gal-img, .prod-gallery-full.three .gallery-wrap .gal-img { width: 100%; padding: 15px; }
     
+    .products-101 .needs-101-item { flex-wrap: wrap; }
+    .products-101 .needs-101-item .prod-info { width: 100%; }
+    .products-101 .needs-101-item .prod-content { width: 100%; padding: 20px 0 0 0; }
+
+    .parts-equipment .equip-supply-list li img { width: 100%; }
+    .general-contact.careers-form h3 a, .general-contact.contact-form h3 a { font-size: 20px; }
+    .general-contact.careers-form h2 { font-size: 34px; }
+
+    .careers-current .current-job-postings .job-post { width: 100%; }
+    .careers-current .current-job-postings .job-post .btn-area { width: 100%; padding-top: 25px; }
 }

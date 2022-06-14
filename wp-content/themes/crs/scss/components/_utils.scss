@@ -13,6 +13,12 @@
     }
 }
 
+.map { 
+    height: 50vh; 
+    min-height: 590px;
+    z-index: 1;
+}
+
 .btn { 
     border-radius: 0; 
     background: $blue; 

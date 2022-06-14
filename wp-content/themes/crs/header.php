@@ -19,16 +19,19 @@
 		
 		<?php wp_head(); ?>
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+		<link rel="stylesheet" href="<?php print CSSROOT; ?>/wp-blocks.css">
+
+		<script type="text/javascript" src="https://www.bugherd.com/sidebarv2.js?apikey=cf1xqgkxpunbxq8xwwpibq" async="true"></script>
 	</head>
 	<body class="pg_<?php echo $page_slug; ?>">
 		<div id="page_wrap">
 			<header>
 				<div class="container">
 					<div class="row">
-						<div class="col-12 col-lg-3">
+						<div class="col-5 col-md-3">
 							<a href="<?php echo site_url(); ?>" class="main-logo"><img src="<?php print IMAGES; ?>/crs-logo.svg" class="img-fluid" /></a>
 						</div>
-						<div class="col-12 col-lg-9 top-btn-wrap">
+						<div class="col-7 col-md-9 top-btn-wrap">
 							<?php if(get_field('customer_login', 'option')) { ?>
 							<a href="<?php echo get_field('customer_login', 'option'); ?>" class="btn">Customer Login</a>
 							<?php } ?>
@@ -66,6 +69,12 @@
 									'walker'			=> new WP_Bootstrap_Navwalker())
 								);
 								?>
+
+								<div class="mobile-login">
+									<?php if(get_field('customer_login', 'option')) { ?>
+									<a href="<?php echo get_field('customer_login', 'option'); ?>" class="btn">Customer Login</a>
+									<?php } ?>
+								</div>
 							</div>
 						</div>
 					</div>

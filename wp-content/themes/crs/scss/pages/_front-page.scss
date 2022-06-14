@@ -1,8 +1,6 @@
 .yellow-cta {
     padding: 80px 0;
     background: $yellow;
-    border-top: 1px solid $bordercolor;
-    border-bottom: 1px solid $bordercolor;
 
     h2 { font-size: 60px; }
 }
@@ -10,8 +8,6 @@
 .customer-login-home {
     padding: 80px 0;
     background: $yellow;
-    border-top: 1px solid $bordercolor;
-    border-bottom: 1px solid $bordercolor;
 
     .content-area {
         display: flex;
@@ -19,6 +15,49 @@
 
         .btn-area {
             padding-top: 25px;
+        }
+    }
+}
+
+.home-intro {
+    width: 100%;
+    height: 100%;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transition: all 0.8s ease;
+    opacity: 1;
+    background: #d7d1c5;
+
+    &.hide {  
+        z-index: -1;
+        opacity: 0;
+        .video-wrap { display: none; }
+    }
+
+    .video-wrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 10000;
+        background: #f6a800;
+
+        &.bg-switch { background: #d7d1c5; }
+    }
+
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background-size: cover;
+
+        &::-webkit-media-controls {
+            display: none;
         }
     }
 }

@@ -5,6 +5,12 @@
         display: flex;
         align-items: center;
     }
+
+    &.careers-form, &.contact-form {
+        background: $yellow;
+
+        h3 a { text-decoration: none; }
+    }
 }
 
 .pg_products .general-contact, .pg_cranes-101 .general-contact { background: $yellow; }

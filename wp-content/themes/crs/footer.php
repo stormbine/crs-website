@@ -1,9 +1,13 @@
             <?php 
-            if(!is_page_template('parts-page.php')) 
+            if(!is_page_template('parts-page.php') && !is_page_template('careers-page.php') && !is_page_template('contact-page.php') && !is_singular('post')) 
             { 
                 include_once('functions/general-contact.php'); 
             }
-            include_once('functions/newsletter-subscribe.php');
+
+            if(!is_page_template('careers-page.php') && !is_page_template('contact-page.php') && !is_singular('post')) 
+            { 
+                include_once('functions/newsletter-subscribe.php');
+            }
             ?>
         </div>
 
@@ -51,6 +55,12 @@
         
         <link rel="stylesheet" href="<?php print CSSROOT; ?>/jquery.fancybox.min.css">
         <script src="<?php print JSCRIPTS; ?>/jquery.fancybox.min.js"></script>
+
+        <?php if(is_singular('communities') || is_page_template('project-map.php') || is_page_template('about-page.php')) { ?>
+        <script src="<?php print JSCRIPTS; ?>/leaflet/leaflet.js"></script>
+        <link rel="stylesheet" href="<?php print JSCRIPTS; ?>/leaflet/leaflet.css">
+        <script src="<?php print JSCRIPTS; ?>/leaflet-providers.js"></script>
+        <?php } ?>
         
         <script src="<?php print JSCRIPTS; ?>/vue.js"></script>
         <script src="<?php print JSCRIPTS; ?>/vue-scrollto.js"></script>

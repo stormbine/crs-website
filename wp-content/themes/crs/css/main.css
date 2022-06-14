@@ -7,7 +7,7 @@
 
 /* ------------------------ Headings ------------------------ */
 h1 {
-  font-size: 145px;
+  font-size: 115px;
   font-weight: 900;
   line-height: 1.05;
   margin: 0;
@@ -54,7 +54,7 @@ li, ol {
 }
 
 a {
-  color: #002739;
+  color: #005C85;
 }
 a:hover {
   color: #002739;
@@ -74,6 +74,12 @@ a:hover {
   position: absolute;
   width: 100%;
   height: 100%;
+}
+
+.map {
+  height: 50vh;
+  min-height: 590px;
+  z-index: 1;
 }
 
 .btn {
@@ -393,6 +399,9 @@ header .top-btn-wrap {
 #popup-menu .navbar-nav .current-menu-item .nav-link {
   color: #E8AB42;
 }
+#popup-menu .mobile-login {
+  display: none;
+}
 
 .navbtn {
   width: 60px;
@@ -476,6 +485,12 @@ header .top-btn-wrap {
 .general-contact .content-area {
   display: flex;
   align-items: center;
+}
+.general-contact.careers-form, .general-contact.contact-form {
+  background: #E8AB42;
+}
+.general-contact.careers-form h3 a, .general-contact.contact-form h3 a {
+  text-decoration: none;
 }
 
 .pg_products .general-contact, .pg_cranes-101 .general-contact {
@@ -562,8 +577,6 @@ footer .message-col .foot-nsf-logo img {
 .yellow-cta {
   padding: 80px 0;
   background: #E8AB42;
-  border-top: 1px solid #707070;
-  border-bottom: 1px solid #707070;
 }
 .yellow-cta h2 {
   font-size: 60px;
@@ -572,8 +585,6 @@ footer .message-col .foot-nsf-logo img {
 .customer-login-home {
   padding: 80px 0;
   background: #E8AB42;
-  border-top: 1px solid #707070;
-  border-bottom: 1px solid #707070;
 }
 .customer-login-home .content-area {
   display: flex;
@@ -583,6 +594,48 @@ footer .message-col .foot-nsf-logo img {
   padding-top: 25px;
 }
 
+.home-intro {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  transition: all 0.8s ease;
+  opacity: 1;
+  background: #d7d1c5;
+}
+.home-intro.hide {
+  z-index: -1;
+  opacity: 0;
+}
+.home-intro.hide .video-wrap {
+  display: none;
+}
+.home-intro .video-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10000;
+  background: #f6a800;
+}
+.home-intro .video-wrap.bg-switch {
+  background: #d7d1c5;
+}
+.home-intro video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+}
+.home-intro video::-webkit-media-controls {
+  display: none;
+}
+
 .page-hero {
   padding: 100px 0;
 }
@@ -590,7 +643,9 @@ footer .message-col .foot-nsf-logo img {
   margin-bottom: 15px;
 }
 .page-hero h3 {
-  margin-top: 15px;
+  margin-top: 30px;
+  font-size: 55px;
+  line-height: 1.3;
 }
 .page-hero.product-hero h1 {
   font-size: 115px;
@@ -659,8 +714,6 @@ footer .message-col .foot-nsf-logo img {
 .product-list {
   padding: 80px 0;
   background: #E8AB42;
-  border-top: 1px solid #707070;
-  border-bottom: 1px solid #707070;
 }
 .product-list .prod-intro {
   text-align: center;
@@ -716,6 +769,17 @@ footer .message-col .foot-nsf-logo img {
   line-height: 1.3;
   color: #ffffff;
   margin-top: 80px;
+}
+
+.dyk-full-section {
+  background: #E8AB42;
+  padding: 120px 0;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1.3;
+  margin-top: 80px;
+  color: #005C85;
 }
 
 .text-button-cta {
@@ -832,8 +896,6 @@ footer .message-col .foot-nsf-logo img {
 .understanding-101 {
   padding: 80px 0;
   background: #E8AB42;
-  border-top: 1px solid #707070;
-  border-bottom: 1px solid #707070;
 }
 .understanding-101 h3 {
   margin: 20px 0 10px 0;
@@ -882,8 +944,6 @@ footer .message-col .foot-nsf-logo img {
 .parts-equipment {
   padding: 80px 0;
   background: #E8AB42;
-  border-top: 1px solid #707070;
-  border-bottom: 1px solid #707070;
 }
 .parts-equipment .pe-intro {
   text-align: center;
@@ -908,8 +968,481 @@ footer .message-col .foot-nsf-logo img {
   max-width: 175px;
 }
 
+.reach-section {
+  padding: 80px 0;
+  background: #E8AB42;
+}
+.reach-section .reach-intro {
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+.values-title {
+  text-align: center;
+  background: #E8AB42;
+}
+.values-title h2 {
+  margin: 60px 0;
+}
+
+.values-section {
+  padding: 80px 0;
+  background: #E8AB42;
+}
+.values-section .val-bot {
+  padding-top: 60px;
+  text-align: center;
+}
+
+.industry-stories {
+  padding: 80px 0;
+}
+.industry-stories h2 {
+  text-align: center;
+}
+.industry-stories .stories-cat-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0 60px 0;
+}
+.industry-stories .stories-cat-list .story-cat {
+  padding: 10px;
+  flex: 0 0 auto;
+  width: 25%;
+}
+.industry-stories .stories-cat-list .story-cat .inside {
+  border: 1px solid #707070;
+}
+.industry-stories .stories-cat-list .story-cat .inside img {
+  width: 100%;
+  height: auto;
+}
+.industry-stories .stories-cat-list .story-cat .inside .title {
+  text-align: center;
+  font-size: 12px;
+  padding: 8px;
+  color: #ffffff;
+  background: #005C85;
+}
+.industry-stories .stories-btn {
+  text-align: center;
+}
+
+.careers-current {
+  padding: 80px 0;
+}
+.careers-current .current-job-postings .job-post {
+  display: flex;
+  flex-wrap: wrap;
+  background: #005C85;
+  color: #ffffff;
+  padding: 15px 40px;
+  margin: 15px 0;
+}
+.careers-current .current-job-postings .job-post .details {
+  flex: 0 0 auto;
+  width: 75%;
+}
+.careers-current .current-job-postings .job-post .details h3 {
+  color: #ffffff;
+  margin: 0;
+}
+.careers-current .current-job-postings .job-post .details .location {
+  color: #ffffff;
+}
+.careers-current .current-job-postings .job-post .btn-area {
+  flex: 0 0 auto;
+  width: 25%;
+}
+.careers-current .current-job-postings .job-post .btn-area .btn {
+  display: block;
+  background: #E8AB42;
+}
+.careers-current .current-job-postings .job-post .btn-area .btn:hover {
+  background: #ffffff;
+  color: #005C85;
+}
+
+.locations-section {
+  padding: 80px 0;
+}
+
+.single-content {
+  padding: 80px 0;
+}
+.single-content .single-info h3 {
+  margin: 0;
+}
+.single-content .single-info h1 {
+  font-size: 90px;
+  line-height: 1.3;
+  margin-bottom: 30px;
+}
+.single-content .blog-content {
+  overflow: hidden;
+}
+.single-content .blog-content h2 {
+  margin: 20px 0 10px 0;
+  font-size: 24px;
+  line-height: 1.3;
+}
+.single-content .blog-content h3 {
+  margin: 20px 0 10px 0;
+  font-size: 18px;
+  line-height: 1.3;
+}
+.single-content .blog-content h4 {
+  margin: 20px 0 10px 0;
+  font-size: 16px;
+  line-height: 1.3;
+}
+.single-content .wp-block-image {
+  margin: 30px 0;
+  text-align: center;
+}
+.single-content .wp-block-image figcaption {
+  color: #707070;
+  font-size: 14px;
+}
+
+.blog-info-cols {
+  padding: 60px 0 40px 0;
+}
+.blog-info-cols h3 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+.stories-video-block {
+  padding: 20px 0 80px 0;
+  background: #E8AB42;
+}
+.stories-video-block .bot-video {
+  padding-top: 60px;
+}
+.stories-video-block .vid-caption {
+  padding-top: 40px;
+  color: #005C85;
+  text-align: center;
+}
+
+.blog-posts {
+  padding: 80px 0;
+  background: #E8AB42;
+}
+.blog-posts .b-post {
+  justify-content: center;
+}
+.blog-posts .b-post .b-post-item {
+  background: #005C85;
+  color: #ffffff;
+  padding: 25px;
+  margin: 15px 0;
+}
+.blog-posts .b-post .b-post-item h2, .blog-posts .b-post .b-post-item h2 a {
+  color: #ffffff;
+  font-size: 22px;
+  margin: 15px 0;
+  text-decoration: none;
+  line-height: 1.3;
+}
+.blog-posts .b-post .b-post-item .content {
+  min-height: 180px;
+  overflow: hidden;
+}
+.blog-posts .b-post .b-post-item p {
+  color: #ffffff;
+}
+.blog-posts .b-post .b-post-item .btn-area .btn {
+  display: block;
+  background: #D6D4CF;
+  color: #005C85;
+}
+.blog-posts .b-post .b-post-item .btn-area .btn:hover {
+  background: #ffffff;
+}
+.blog-posts .b-post .b-post-item a.post-img {
+  position: relative;
+  width: 100%;
+}
+.blog-posts .b-post .b-post-item a.post-img .image {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.pagination-section {
+  padding: 0 0 80px 0;
+  background: #E8AB42;
+}
+.pagination-section .pagination {
+  justify-content: center;
+}
+.pagination-section .pagination .page-numbers {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 45px;
+  height: 45px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: -0.04px;
+  color: #707070;
+  padding: 0 8px;
+  display: inline-block;
+  text-decoration: none;
+}
+.pagination-section .pagination .page-numbers.current {
+  color: #005C85;
+}
+.pagination-section .pagination .page-numbers.next, .pagination-section .pagination .page-numbers.prev {
+  background: #005C85;
+  color: #ffffff;
+  line-height: 45px;
+  padding: 0 15px;
+  margin: 0 10px;
+}
+.pagination-section .pagination .page-numbers.next:hover, .pagination-section .pagination .page-numbers.prev:hover {
+  background: #ffffff;
+  color: #005C85;
+}
+
+.proj-map-wrap {
+  position: relative;
+}
+.proj-map-wrap .project-markers {
+  display: none;
+}
+.proj-map-wrap .project-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 60px;
+  width: 75%;
+  max-width: 800px;
+  z-index: 100;
+  background: #ffffff;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+.proj-map-wrap .project-popup.active {
+  display: block;
+}
+.proj-map-wrap .project-popup .close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.proj-map-wrap .project-popup .close-btn:hover {
+  opacity: 0.8;
+}
+.proj-map-wrap .project-popup h3 {
+  margin: 0 0 10px 0;
+}
+.proj-map-wrap .project-popup P {
+  margin: 0;
+}
+.proj-map-wrap .map-toggles {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+}
+.proj-map-wrap .map-toggles .region-toggle {
+  color: #005C85;
+  font-weight: 700;
+  flex: 0 0 auto;
+  width: 25%;
+  padding: 12px 25px;
+  text-align: center;
+  cursor: pointer;
+}
+.proj-map-wrap .map-toggles .region-toggle.active, .proj-map-wrap .map-toggles .region-toggle:hover {
+  color: #002739;
+}
+
 /* --------------------------------------------------------------------------
 Media Queries.
 -------------------------------------------------------------------------- */
+@media (max-width: 1280px) {
+  h1, .page-hero.product-hero h1 {
+    font-size: 90px;
+  }
+
+  #popup-menu .navbar-nav .menu-item > .nav-link {
+    font-size: 55px;
+  }
+}
+@media (max-width: 1024px) {
+  footer .footer-nav {
+    columns: 1;
+  }
+
+  .page-hero h3 {
+    margin-top: 15px;
+    line-height: 1.1;
+  }
+
+  .crane-services h2 {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  .prod-gallery-half .gallery-wrap .gal-img {
+    width: 100%;
+  }
+
+  .prod-gallery-full .gallery-wrap .gal-img {
+    width: 33.333333%;
+  }
+
+  .page-hero.product-hero h1 {
+    font-size: 70px;
+  }
+
+  .page-hero.product-hero h3 {
+    font-size: 40px;
+  }
+
+  .prod-gallery-full.three .gallery-wrap .gal-img {
+    padding: 15px;
+  }
+
+  .parts-equipment .equip-supply-list li {
+    width: 50%;
+  }
+
+  .single-content .single-info h1 {
+    font-size: 60px;
+  }
+}
+@media (max-width: 480px) {
+  h1, .single-content .single-info h1 {
+    font-size: 48px;
+  }
+
+  .page-hero h3 {
+    margin-top: 15px;
+    font-size: 40px;
+    line-height: 1.1;
+  }
+
+  header {
+    padding: 30px 0 0 0;
+  }
+  header .top-btn-wrap {
+    display: none;
+  }
+
+  footer {
+    text-align: center;
+  }
+  footer .footer-nav {
+    padding: 40px 0;
+    margin: 0;
+  }
+
+  .btn {
+    display: block;
+    font-size: 14px;
+    padding: 15px 30px;
+  }
+
+  #popup-menu .navbar-nav .menu-item > .nav-link {
+    font-size: 35px;
+  }
+  #popup-menu .mobile-login {
+    display: block;
+    padding-top: 45px;
+  }
+
+  .navbtn.inside-menu {
+    top: 20px;
+    right: 0px;
+  }
+
+  .yellow-cta h2, h2 {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+
+  .content-rows .content-area .inner, .customer-login-home .content-area .inner, .crane-services .content-area .inner {
+    padding-top: 30px;
+  }
+
+  .crane-services h2 {
+    font-size: 34px;
+  }
+
+  .product-list .prod-item a {
+    padding: 30px 15px;
+  }
+
+  .product-list .prod-item-wrap {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 15px 0;
+  }
+
+  .did-you-know {
+    padding: 40px;
+    font-size: 22px;
+  }
+
+  .page-hero.product-hero h1 {
+    font-size: 48px;
+  }
+
+  .page-hero.product-hero h3 {
+    font-size: 28px;
+  }
+
+  .prod-gallery-full .gallery-wrap .gal-img, .prod-gallery-full.three .gallery-wrap .gal-img {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .products-101 .needs-101-item {
+    flex-wrap: wrap;
+  }
+
+  .products-101 .needs-101-item .prod-info {
+    width: 100%;
+  }
+
+  .products-101 .needs-101-item .prod-content {
+    width: 100%;
+    padding: 20px 0 0 0;
+  }
+
+  .parts-equipment .equip-supply-list li img {
+    width: 100%;
+  }
+
+  .general-contact.careers-form h3 a, .general-contact.contact-form h3 a {
+    font-size: 20px;
+  }
+
+  .general-contact.careers-form h2 {
+    font-size: 34px;
+  }
+
+  .careers-current .current-job-postings .job-post {
+    width: 100%;
+  }
+
+  .careers-current .current-job-postings .job-post .btn-area {
+    width: 100%;
+    padding-top: 25px;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,49 @@
+.stories-gallery {
+    padding-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .st-gallery-item {
+        flex: 0 0 auto;
+        width: 33.33333334%;
+        padding: 15px;
+
+        a { 
+            display: block;
+
+            .image {
+                width: 100%;
+                height: 0;
+                padding-bottom: 145%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;                    
+            }
+        }
+
+        .caption {
+            color: #707070;
+            padding: 14px 0;
+            width: 100%;
+            line-height: 1.2;
+            font-size: 12px;
+            text-align: center;
+        }
+    }
+}
+
+/* --------------------------------------------------------------------------
+Media Queries.
+-------------------------------------------------------------------------- */
+@media (max-width: 1280px) {
+   
+}
+
+@media (max-width: 1024px) {
+    .stories-gallery .st-gallery-item { width: 50%; }
+}
+
+@media (max-width: 480px) {
+    .stories-gallery .st-gallery-item { width: 100%; }
+}

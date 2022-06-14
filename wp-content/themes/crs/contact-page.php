@@ -5,42 +5,63 @@
     get_header();
 ?>
 	
-    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); 
-        if(has_post_thumbnail()) { 
-            $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); 
-        }
-    ?>	
+    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>	
 
-    <div class="page-hero">
-        <div class="rellax" style="background-image: url(<?php echo $url; ?>);" data-rellax-speed="-10"></div>
-    </div>
-    
-    <section class="contact-main">
-        <div class="bg"></div>
+    <?php 
+    $heroFields = get_field('page_hero'); 
+    if($heroFields)
+    {
+        ?>
+    <section class="page-hero">
         <div class="container">
             <div class="row">
-                <div id="gc1" class="col-12 col-lg-5 hide-start">
-                    <?php the_content(); ?>
+                <div class="col-12">
+                    <h1><?php echo $heroFields['title']; ?></h1>
+                    <?php echo $heroFields['content']; ?>
                 </div>
-                <div id="gc2" class="col-12 col-lg-5 offset-lg-2 hide-start">
+            </div>
+        </div>
+    </section>
+        <?php
+    }
+    ?>
+
+    <?php 
+        $genFormFields = get_field('contact_form'); 
+        if($genFormFields)
+        {
+            ?>
+    <section class="general-contact contact-form">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 content-area">
+                    <div class="inner">
+                        <h2><?php echo $genFormFields['title']; ?></h2>
+                        <?php echo $genFormFields['content']; ?>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
                     <div class="contact-form">
-                        <h2>General Inquiries</h2>
-                        <div class="cta">
-                            <p>Looking for a more detailed inquiry?</p>
-                            <a href="<?php echo site_url('get-started'); ?>" class="btn">Plan Your Event</a>
-                        </div>
-                        
-                        <?php echo do_shortcode('[contact-form-7 id="5"]'); ?>
+                        <?php echo do_shortcode('[contact-form-7 id="' . $genFormFields['form'] . '"]'); ?>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+            <?php
+        }
+    ?>
 
-    <section class="page-par-sep">
-        <div class="inside" style="background-image: url(<?php print IMAGES; ?>/get_in_touch_mid_banner.jpg);"></div>
+    <section class="locations-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Locations</h2>
+                    <p><?php echo get_field('locations', 'option'); ?></p>
+                </div>
+            </div>
+        </div>
     </section>
-
     
     <?php endwhile; else: ?>
         <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>

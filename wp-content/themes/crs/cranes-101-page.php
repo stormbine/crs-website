@@ -82,7 +82,7 @@
                         $pName = $colItem['product']->post_name;
                         $pGallery = get_field('gallery', $pID);
                         ?>
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-lg-6">
                     <div class="needs-101-item">
                         <div class="prod-info">
                             <a href="<?php echo site_url('products/' . $pName); ?>" class="img-wrap"><div style="background-image: url(<?php echo $pGallery[0]['sizes']['medium'] ?>)"></div></a>

@@ -70,7 +70,7 @@
                 <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 srv-action">
                     <h2>See Our Services in Action</h2>
                     <div class="btn-area">
-                        <a href="<?php echo get_field('services_in_action_link'); ?>" class="btn">Learn More</a>
+                        <a href="<?php echo site_url('stories'); ?>" class="btn">Learn More</a>
                     </div>
                 </div>
             </div>
